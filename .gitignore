@@ -1,0 +1,10 @@
+*
+!ExampleTree-Input-P0-0
+!ExampleTree-Input-P1-0
+!README.md
+!exampleTree
+!generateMPC.hs
+!generateRandomTree.hs
+!generate_data.py
+!run_benchmarks.sh
+!.gitignore

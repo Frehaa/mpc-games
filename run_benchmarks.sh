@@ -7,8 +7,8 @@ OUTPUTDIR="outputs"
 BATCHSIZE=50
 SEEDS=(1331)
 SPLITS=(4 2) # Also specifies player count
-HEIGHT=5 
-MAXHEIGHT=10
+HEIGHT=8 
+MAXHEIGHT=12
 
 
 SPLITSTR="$(printf '%d,' "${SPLITS[@]}")"

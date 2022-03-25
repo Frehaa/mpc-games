@@ -1,10 +1,12 @@
 # Installation
 
+These instructions were made for a machine running Windows Subsystems for Linux
+2 with Ubuntu 20.04.
+
 Follow the instructions for MP-SPDZ, we are able to get everything working with
 the following commands, but your mileage may vary.
 
 ```
-cd MP-SPDZ
 git submodule update --init --recursive
 apt-get install automake build-essential git libboost-dev libboost-thread-dev libntl-dev libsodium-dev libssl-dev libtool m4 python3 texinfo yasm
 make tldr
@@ -28,9 +30,9 @@ as follows:
 
 ```
 ./generateMPC "[3, 5]" < exampleTree > exampleTree.mpc
-cd ../MP-SPDZ
-./compile.py -M ../src/exampleTree.mpc
-./Scripts/mascot.sh -IF ../src/ExampleTree-Input exampleTree
+cd MP-SPDZ
+./compile.py -M ../exampleTree.mpc
+./Scripts/mascot.sh -IF ../ExampleTree-Input exampleTree
 ```
 
 If everything works then it should output the following, along with various
@@ -45,8 +47,8 @@ The selected outcome (TUMO) is 2
 ```
 # Run benchmarks 
 
-At this point everything should be ready, so you should be able to run the benchmarking script. The output will be
-located in the ``outputs`` folder. 
+At this point everything should be ready, so you should be able to run the
+benchmarking bash script. The output will be located in the ``outputs`` folder. Note that the scripts does no error handling, so results will have to be manually verified. 
 
 ```
 chmod +x run_benchmarks.sh
